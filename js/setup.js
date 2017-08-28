@@ -22,14 +22,6 @@ var SIMILAR_SURNAMES = [
   'Ирвин'
 ];
 
-var SIMILAR_FULLNAMES = [
-  SIMILAR_NAMES [Math.floor(Math.random() * SIMILAR_NAMES.length)] + ' ' + SIMILAR_SURNAMES [Math.floor(Math.random() * SIMILAR_SURNAMES.length)],
-  SIMILAR_NAMES [Math.floor(Math.random() * SIMILAR_NAMES.length)] + ' ' + SIMILAR_SURNAMES [Math.floor(Math.random() * SIMILAR_SURNAMES.length)],
-  SIMILAR_NAMES [Math.floor(Math.random() * SIMILAR_NAMES.length)] + ' ' + SIMILAR_SURNAMES [Math.floor(Math.random() * SIMILAR_SURNAMES.length)],
-  SIMILAR_NAMES [Math.floor(Math.random() * SIMILAR_NAMES.length)] + ' ' + SIMILAR_SURNAMES [Math.floor(Math.random() * SIMILAR_SURNAMES.length)],
-  SIMILAR_NAMES [Math.floor(Math.random() * SIMILAR_NAMES.length)] + ' ' + SIMILAR_SURNAMES [Math.floor(Math.random() * SIMILAR_SURNAMES.length)],
-  SIMILAR_NAMES [Math.floor(Math.random() * SIMILAR_NAMES.length)] + ' ' + SIMILAR_SURNAMES [Math.floor(Math.random() * SIMILAR_SURNAMES.length)]
-];
 var SIMILAR_COAT_COLORS = [
   'rgb(101, 137, 164)',
   'rgb(241, 43, 107)',
@@ -58,7 +50,7 @@ var genWizards = function (b) {
   for (var j = b; j >= 0; j--) {
     c.unshift(
         {
-          name: getRandomElement(SIMILAR_FULLNAMES),
+          name: getRandomElement(SIMILAR_NAMES) + ' ' + getRandomElement(SIMILAR_SURNAMES),
           coatColor: getRandomElement(SIMILAR_COAT_COLORS),
           eyesColor: getRandomElement(SIMILAR_EYES_COLORS)
         }
