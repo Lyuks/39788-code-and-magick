@@ -82,10 +82,6 @@ var renderWizards = function (container, wizardsAmount) {
   }
 };
 
-  // for (var i = 0; i < wizards.length; i++) {
-  //  var wizardElem = renderWizard(wizards[i]);
-  // similarListElement.appendChild(wizardElem);
-  // }
 renderWizards(similarListElement, wizards);
 
 document.querySelector('.setup-similar').classList.remove('hidden');
